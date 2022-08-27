@@ -25,7 +25,7 @@ const daoEffectsX = () => {
         const clickER = document.getElementById('button-effects')
         if (event.target == clickER) {
 
-            for (let i = 0; i < 41; i++) {
+            for (let i = 0; i < 50; i++) {
 
                 const divGame = document.createElement('div')
                 root.appendChild(divGame)
@@ -39,7 +39,7 @@ const daoEffectsX = () => {
 
             const controlEffects = setInterval(function () {
 
-                let randomNumber = Math.floor(Math.random() * 41)
+                let randomNumber = Math.floor(Math.random() * 50)
 
                 const alvoSelected = document.getElementById(randomNumber)
                 
@@ -58,16 +58,16 @@ const daoEffectsX = () => {
                         }
 
                         console.log(soma)
-                        elementPlacar.innerHTML = 'Pontuação de acertos:' + soma
+                        elementPlacar.innerHTML = 'Pontuação de shoting:' + soma
 
                     }
 
                 })
                 setInterval(function () {
                     removeSelected.classList.remove('actived-alvo-x')
-                }, 1400)
+                }, 1300)
 
-            }, 1300)
+            }, 1200)
 
 
         }
@@ -81,7 +81,7 @@ const daoEffectsY = () => {
         if (event.target == clickER) {
 
 
-            for (let i = 0; i < 41; i++) {
+            for (let i = 0; i < 50; i++) {
 
                 const divGame = document.createElement('div')
                 root.appendChild(divGame)
@@ -97,7 +97,7 @@ const daoEffectsY = () => {
 
             const controlEffects = setInterval(function () {
 
-                let randomNumber = Math.floor(Math.random() * 41)
+                let randomNumber = Math.floor(Math.random() * 50)
 
                 const alvoSelected = document.getElementById(randomNumber)
                 
@@ -116,9 +116,10 @@ const daoEffectsY = () => {
                         }
 
                         console.log(soma)
-                        elementPlacar.innerHTML = 'Pontuação de acertos:' + soma
+                        elementPlacar.innerHTML = 'Pontuação de shoting:' + soma
 
                     }
+
 
                 })
                 setInterval(function () {
