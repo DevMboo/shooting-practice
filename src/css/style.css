@@ -1,0 +1,148 @@
+body{
+    overflow: hidden;
+    background-image: url(../assets/BADASS.jpg);
+    background-size: 1350px 690px;
+}
+
+.content-principal{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+#root{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#criarInput{
+    background-color: #d615fd;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 0px 15px 15px 0px;
+}
+
+#criarInput:hover{
+    background-color: rgba(214, 21, 253,.4);
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(21, 137, 231, 0.089);
+    border: 2px solid #fff;
+    border-radius: 15px;
+}
+
+.content-card{
+    z-index: 300;
+}
+
+.content-score{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    color: #ffff;
+    padding: 1rem;
+}
+
+.mask{
+    position: absolute;
+    left: 0px;
+    top: 140px;
+    width: 100%;
+    height: 100%;
+}
+
+.root-effects{
+    margin-top: 25px;
+    background-color: #d615fd;
+    color: rgb(255, 255, 255);
+    font-style: italic;
+    border: none;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 15px;
+    border-radius: 45px;
+    z-index: 300;
+}
+
+.div-effects{
+    background-color: transparent;
+    color: transparent;
+    font-weight: bold;
+    text-align: center;
+    width: 65px;
+    height: 65px;
+    margin: 10px;
+    transition: .3s !important;
+
+}
+
+.div-effects-y{
+    background-color: transparent;
+    color: transparent;
+    font-weight: bold;
+    text-align: center;
+    width: 65px;
+    height: 65px;
+    margin: 10px;
+    transition: .3s !important;
+
+}
+
+.content-score{
+    display: flex;
+}
+
+.actived-alvo-x{
+    background-color: rgb(54, 54, 54,.5);
+    color:white;
+    border: 4px solid white;
+    font-weight: bold;
+    transition: .3s !important;
+    border-radius: 50%;
+    display: block;
+    z-index: 30000001;
+    animation: movement-alvo-x 1.3s alternate;
+}
+
+.actived-alvo-y{
+    background-color: rgb(54, 54, 54,.5);
+    color:white;
+    border: 4px solid white;
+    font-weight: bold;
+    transition: .3s !important;
+    border-radius: 50%;
+    display: block;
+    z-index: 30000001;
+    animation: movement-alvo-y 1.3s alternate;
+}
+
+.disabled{
+    display: none;
+}
+
+@keyframes movement-alvo-x {
+   from {
+     transform: translateX(100px);
+   }
+   to {
+     transform: translateX(0);
+   }
+}
+
+@keyframes  movement-alvo-y{
+    from {
+        transform: translateY(0px);
+      }
+      to {
+        transform: translateY(100px);
+      }
+}

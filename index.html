@@ -4,126 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/style.css">
     <title>Game - Shot</title>
 </head>
-<style>
-    #root{
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    .root-effects{
-        margin-top: 25px;
-        background-color: rgb(155, 155, 155);
-        color: #000;
-        font-style: italic;
-        border: none;
-        width: 75;
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        padding: 15px;
-        border-radius: 45px;
-    }
-
-    .div-effects{
-        background-color: azure;
-        color: #000;
-        font-weight: bold;
-        text-align: center;
-        width: 70px;
-        height: 70px;
-        margin: 10px;
-        transition: .3s !important;
-    }
-
-    .actived-alvo{
-        background-color: rgb(214, 83, 22);
-        color:white;
-        font-weight: bold;
-        transition: .3s !important;
-    }
-    
-    .disabled{
-        display: none;
-    }
-</style>
 <body>
-    <h2>Game-shoting</h2>
-    <button id="criarInput">Crie mais um</button>
-    <div id="root"></div>
+    <div class="content-principal">
+        <div class="content-card nav">
+            <span class="content-score">
+                <span>
+                    <h2>Game-shoting</h2>
+                </span>
+                <span>
+                    <h2 id="score"></h2>
+                </span>
+            </span>
+            <button id="criarInput">Inicializar treino</button>
+        </div>
+        <div id="root"></div>
+        <div class="mask"></div>
+    </div>
 </body>
-<script>
-    /*
-    let n1 = 3;
-    let n2 = 5;
-    let soma = 0;
-
-    const itemVetor = [1,2,3,4,5,6]
-
-    for(let i = 0; i < 11; i++){
-       soma = n1 * i;
-       console.log('Multiplicando ' + n1 + ' x ' + i + " o resultado é = " + soma)
-    }
-
-
-    console.log(itemVetor.slice(3,6     ))
-    */
-    const criarInput = document.getElementById('criarInput')
-    const root = document.getElementById('root')
-
-    const capturaClick = () => {
-        addEventListener('click', function(event) {
-            if(event.target == criarInput){
-                
-                const button = document.createElement('button')
-                        const titleButtonAlert = document.createTextNode('Deseja iniciar o game!')
-                        button.appendChild(titleButtonAlert)
-                    button.id = "button-effects"
-                button.classList.add('root-effects')
-                root.appendChild(button)
-                criarInput.classList.add('disabled')
-            }
-        })
-    }
-
-    
-    const daoEffects = () => {
-        addEventListener('click', function(event) {
-            const clickER = document.getElementById('button-effects')
-            if(event.target == clickER){
-
-                for(let i = 0; i < 41; i++){
-                    
-                        const divGame = document.createElement('div')
-                            root.appendChild(divGame)
-                        const idDiv = document.createTextNode(i)
-                            divGame.appendChild(idDiv)
-                        divGame.classList.add('div-effects')    
-                        divGame.id = i
-                    }
-                    
-                
-                clickER.classList.add('disabled')
-
-                const controlEffects = setInterval(function () {
-
-                    let randomNumber = Math.floor(Math.random() * 41)
-                    const alvoSelected = document.getElementById(randomNumber)
-                    alvoSelected.classList.add('actived-alvo')
-                    const removeSelected = document.getElementById(randomNumber)
-                    setInterval(function (){
-                        removeSelected.classList.remove('actived-alvo')
-                    }, 1600)
-
-                }, 1500)
-
-                
-            }
-        })
-    }
-    capturaClick()
-    daoEffects()
-    </script>
+<script src="src/js/script.js"></script>
 </html>
