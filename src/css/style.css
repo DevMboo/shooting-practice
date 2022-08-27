@@ -1,8 +1,29 @@
 body{
     overflow: hidden;
-    background-image: url(https://wallpapercave.com/wp/wp5037342.jpg);
+    background-image: url(https://wallpapercave.com/wp/wp5037356.jpg);
     background-size: cover;
-    
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 500px){
+    body{
+        overflow: hidden;
+        overflow-y: hidden;
+        overflow-x: hidden;
+        background-image: url(https://cutewallpaper.org/22/celular-anime-4k-wallpapers/131978117.jpg);
+    }
+
+    .div-effects{
+        width: 30px !important;
+        height: 30px !important;
+    }
+
+    .div-effects-y{
+        width: 30px !important;
+        height: 30px !important;
+    }
+
+
 }
 
 .content-principal{
@@ -30,6 +51,19 @@ body{
 }
 
 .nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(34, 39, 43, 0.521);
+    border: 2px solid #fff;
+    border-radius: 15px;
+}
+
+.footer{
+    position: absolute;
+    top: 80vh;
+    margin-top: 20px;
+    height: 140px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     background-color: rgba(34, 39, 43, 0.521);
@@ -65,7 +99,7 @@ body{
     color: rgb(255, 255, 255);
     border: 2px solid rgb(255, 255, 255);
     font-style: italic;
-    width: 150px;
+    width: 220px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
