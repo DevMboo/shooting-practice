@@ -1,30 +1,14 @@
+@import url(../css/responsive.css);
+
 body{
     overflow: hidden;
-    background-image: url(https://wallpapercave.com/wp/wp5037356.jpg);
+    background-image: url(https://rare-gallery.com/resol/1920x1080/122902-katana-girl-anime-girl-4k.jpg);
     background-size: cover;
-    background-repeat: no-repeat;
+    height: 100vh;
+    background-color: #000;
+    font-family: 'Silkscreen', cursive;
 }
 
-@media (max-width: 500px){
-    body{
-        overflow: hidden;
-        overflow-y: hidden;
-        overflow-x: hidden;
-        background-image: url(https://cutewallpaper.org/22/celular-anime-4k-wallpapers/131978117.jpg);
-    }
-
-    .div-effects{
-        width: 30px !important;
-        height: 30px !important;
-    }
-
-    .div-effects-y{
-        width: 30px !important;
-        height: 30px !important;
-    }
-
-
-}
 
 .content-principal{
     position: relative;
@@ -44,6 +28,7 @@ body{
     cursor: pointer;
     border: none;
     border-radius: 0px 15px 15px 0px;
+    font-family: 'Silkscreen', cursive;
 }
 
 #criarInput:hover{
@@ -90,7 +75,8 @@ body{
     left: 0px;
     top: 140px;
     width: 100%;
-    height: 100%;
+    height: 500px;
+    overflow: hidden;
 }
 
 .root-effects{
@@ -98,7 +84,7 @@ body{
     background-color: rgba(20, 19, 20, 0.781);
     color: rgb(255, 255, 255);
     border: 2px solid rgb(255, 255, 255);
-    font-style: italic;
+    font-family: 'Silkscreen', cursive;
     width: 220px;
     display: flex;
     justify-content: center;
@@ -144,7 +130,7 @@ body{
     transition: .3s !important;
     border-radius: 50%;
     display: block;
-    z-index: 30000001;
+    z-index: 3000;
     animation: movement-alvo-x 1.3s alternate;
 }
 
@@ -156,7 +142,7 @@ body{
     transition: .3s !important;
     border-radius: 50%;
     display: block;
-    z-index: 30000001;
+    z-index: 3000;
     animation: movement-alvo-y 1.3s alternate;
 }
 

@@ -4,8 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="src/css/responsive.css">
-    <link rel="stylesheet" href="src/css/style.css">
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+    <!-- Components abstracts page -->
+    <link rel="stylesheet" href="src/css/components.css"/>
+    <!-- Stylesheet page -->
+    <link rel="stylesheet" href="src/css/style.css"/>
+    <!-- Components responsive page -->
+    <link rel="stylesheet" href="src/css/responsive.css"/>
     <title>Game - Shot</title>
 </head>
 <body>
@@ -13,20 +21,34 @@
         <div class="content-card nav">
             <span class="content-score">
                 <span>
-                    <h2>Game-shoting</h2>
+                    <h4>Game-shoting</h4>
                 </span>
                 <span>
-                    <h2 id="score"></h2>
+                    <h4 id="score"></h4>
                 </span>
             </span>
             <button id="criarInput">Inicializar treino</button>
         </div>
+        <!-- 
+            //////// Element root ////////
+            * Assim como a proposta de alguns frameworks js
+            * que usam essa nomenclatura "root", para usar
+            * o javascript para renderizar elementos no formato 
+            * single page aplication, adotei o mesmo formato para assim
+            * cria uma ferramenta dinamica apenas com um conteudo sendo montado via javascript 
+        -->
+
         <div id="root"></div>
+
+        <!-- //////// End Element root //////// -->
         <div class="mask"></div>
+
         <div class="content-card-footeer footer">
 
         </div>
     </div>
+    
 </body>
+<script src="src/js/components.js"></script>
 <script src="src/js/script.js"></script>
 </html>

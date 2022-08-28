@@ -1,0 +1,23 @@
+@media (max-width: 500px){
+    body{
+        overflow: hidden;
+        overflow-y: hidden;
+        overflow-x: hidden;
+        background-image: url(../assets/cell-artist-anime-girls-Girl-With-Weapon-science-fiction-1956801-wallhere.com.jpg);
+        background-size: cover;
+        background-color: #000;
+        height: 100vh;
+    }
+
+    .div-effects{
+        width: 30px !important;
+        height: 30px !important;
+    }
+
+    .div-effects-y{
+        width: 30px !important;
+        height: 30px !important;
+    }
+
+
+}

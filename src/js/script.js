@@ -1,7 +1,17 @@
 const criarInput = document.getElementById('criarInput')
 const root = document.getElementById('root')
+let balls = 50
 let score = [];
 const elementPlacar = document.getElementById('score')
+
+
+
+/**
+ *  @function capturaClick 
+ *  função determinada a capturar o click inicial do jog
+ *  e inicializar os processos do lading page game
+ *  chamando as outras funções subsequentes.
+ */
 
 const capturaClick = () => {
     addEventListener('click', function (event) {
@@ -18,14 +28,19 @@ const capturaClick = () => {
     })
 }
 
-
+/**
+ * @function daoEffectsX
+ * função de renderização dos alvos e elementos
+ * do jogo sob o eixo x, todos os movimentos
+ * em seu eixo ficam sob controle dessa função  
+ */
 const daoEffectsX = () => {
     addEventListener('click', function (event) {
         //score = 0;
         const clickER = document.getElementById('button-effects')
         if (event.target == clickER) {
 
-            for (let i = 0; i < 50; i++) {
+            for (let i = 0; i < balls; i++) {
 
                 const divGame = document.createElement('div')
                 root.appendChild(divGame)
@@ -39,7 +54,7 @@ const daoEffectsX = () => {
 
             const controlEffects = setInterval(function () {
 
-                let randomNumber = Math.floor(Math.random() * 50)
+                let randomNumber = Math.floor(Math.random() * balls)
 
                 const alvoSelected = document.getElementById(randomNumber)
                 
@@ -51,13 +66,13 @@ const daoEffectsX = () => {
                     if (e.target == document.getElementById(randomNumber)) {
 
                         score.push(100)
-                        console.log(score)
+                        //console.log(score)
                         let soma = 0;
                         for (let i = 0; i < score.length; i++) {
                             soma += score[i];
                         }
 
-                        console.log(soma)
+                        //console.log(soma)
                         elementPlacar.innerHTML = 'Pontuação de shoting:' + soma
 
                     }
@@ -65,14 +80,21 @@ const daoEffectsX = () => {
                 })
                 setInterval(function () {
                     removeSelected.classList.remove('actived-alvo-x')
-                }, 1300)
+                }, 1600)
 
-            }, 1200)
+            }, 1500)
 
 
         }
     })
 }
+
+/**
+ * @function daoEffectsY 
+ * função de renderização dos alvos e elementos
+ * do jogo sob o eixo y, todos os movimentos
+ * em seu eixo ficam sob controle dessa função  
+ */
 
 const daoEffectsY = () => {
     addEventListener('click', function (event) {
@@ -81,7 +103,7 @@ const daoEffectsY = () => {
         if (event.target == clickER) {
 
 
-            for (let i = 0; i < 50; i++) {
+            for (let i = 0; i < balls; i++) {
 
                 const divGame = document.createElement('div')
                 root.appendChild(divGame)
@@ -97,7 +119,7 @@ const daoEffectsY = () => {
 
             const controlEffects = setInterval(function () {
 
-                let randomNumber = Math.floor(Math.random() * 50)
+                let randomNumber = Math.floor(Math.random() * balls)
 
                 const alvoSelected = document.getElementById(randomNumber)
                 
@@ -109,13 +131,13 @@ const daoEffectsY = () => {
                     if (e.target == document.getElementById(randomNumber)) {
 
                         score.push(100)
-                        console.log(score)
+                        //console.log(score)
                         let soma = 0;
                         for (let i = 0; i < score.length; i++) {
                             soma += score[i];
                         }
 
-                        console.log(soma)
+                        //console.log(soma)
                         elementPlacar.innerHTML = 'Pontuação de shoting:' + soma
 
                     }
@@ -124,16 +146,34 @@ const daoEffectsY = () => {
                 })
                 setInterval(function () {
                     removeSelected.classList.remove('actived-alvo-y')
-                }, 1400)
+                }, 1600)
 
-            }, 1300)
+            }, 1500)
 
 
         }
     })
 }
 
+/**
+ * @function widthWindow
+ * responsavel por identificar o tamanho da tela
+ * e assim atribuir o número correto de alvos a 
+ * serem renderizados por partida
+ */
 
+const widthWindow = () => {
+
+    let width = window.screen.width;
+
+    if(width < 600){
+        balls = 20
+    }
+
+}
+
+
+widthWindow()
 capturaClick()
 daoEffectsX()
 daoEffectsY()
