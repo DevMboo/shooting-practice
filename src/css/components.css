@@ -11,21 +11,23 @@
     z-index: 3001;
     background-color: rgba(20, 19, 20, 0.781);
     backdrop-filter: blur(8px);
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .modal-spanded{
-    width: 65rem;
+    width: 80%;
     height: 550px;
-    min-height: 300px;
-    padding: 10px;
+    min-height: 250px;
+    margin: 20px;
+    padding: 30px;
     border: 3px solid #fff;
     background-color: rgba(20, 19, 20, 0.87);
     border-radius: 15px;
     color: #fff;
     position: relative;
+    
 }
 
 .modal-header > span{
@@ -47,33 +49,58 @@
 }
 
 .modal-elements{
-    width: 100%;
+    max-width: 100%;
     height: 90%;
     position: relative;
     display: flex;
     justify-content: center;
 }
 
-.content-items::-webkit-scrollbar {
-    width: 5px;               /* width of the entire scrollbar */
+.modal-elements > .content-items{
+    max-width: 100vw;
+    height: 400px;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.content-items::-webkit-scrollbar{
+    width: 0px;
+}
+
+
+
+.content-items > div{
+    flex: none;
+    scroll-snap-align: start;
+}
+
+
+
+.steps-elements{
+    text-align: justify;
+    padding: 15px;
+    height: auto;
+    width:98%;
+    min-width: 300px;
+    overflow: auto;
+    overflow-y: scroll;
+
+}
+
+.steps-elements::-webkit-scrollbar {
+    width: 3px;               /* width of the entire scrollbar */
   }
 
-.content-items::-webkit-scrollbar-track {
+.steps-elements::-webkit-scrollbar-track {
     background: rgba(156, 156, 156, 0.055);        /* color of the tracking area */
   }
 
-.content-items::-webkit-scrollbar-thumb {
+.steps-elements::-webkit-scrollbar-thumb {
     background-color: rgba(0, 0, 255, 0.034);    /* color of the scroll thumb */
     border-radius: 20px;       /* roundness of the scroll thumb */
     border: 3px solid #ececec;  /* creates padding around scroll thumb */
-}
-
-.modal-elements > .content-items{
-    text-align: justify;
-    padding: 10px;
-    height: 350px;
-    overflow: auto;
-    overflow-y: scroll;
 }
 
 
